@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Lynda:Building Data-Driven App</title>
+    <title>Building Data-Driven App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gdSiteNav.css">
     
 <!--====================CSS========================-->
 
@@ -11,23 +13,26 @@
 </head>
 <!--============================================-->
 <body>
-<!--====================NAV========================-->
-
-<!--====================CONTENT========================-->
-
-
-
-
-
-
-HELLO!
+    <!--====================NAV========================-->
+    <header>
+        <nav ng-include="'views/gdNav.html'"></nav>
+    </header>
+    <!--====================CONTENT========================-->
 
 
 
 
-<!--=======================SCRIPT=====================-->        
 
 
+    HELLO WORLD!
+
+
+
+
+    <!--=======================SCRIPT=====================-->        
+    <script src="js/lib/jquery-2.0.3.min.js"></script>
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!--=====| GD NAVIGATION BAR: Relies on gDSiteNav.css |=====-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navX">
+        <!-- navbar-default navbar-inverse-->
+        <!-- Branding logo -->
+        <a class="navbar-brand" ng-href="#/"><img src="images/RLG_Logo.png" alt="GonzalesDesign" id="logoID">
+        </a>
+        <!-- Collapsed menu bar with icon-bar buttons -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <!-- sr-only: for screen reader use only -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brandTxt">
+                <a ng-href="index.html"><span class="gonzales">Gonzales</span><span class="design">Design</span></a>
+            </div>
+        </div>
+        <!-- end navbar-header -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!-- <li><a ng-href="index.html" ><span class="gonzales">Gonzales</span><span class="design">Design</span></a></li> -->
+                <!-- <li class="active"><a ng-href="#">Home</a></li> -->
+                <li class="dropdown">
+                    <a ng-href="" class="dropdown-toggle allCaps" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Gallery:</li>
+                        <li class="divider"></li>
+                        <li><a ng-href="#/details/6">Mural Painting</a>
+                        </li>
+                        <li><a ng-href="#">Digital Illustrations</a> </li>
+                        <li><a ng-href="#">Web Works</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Direct Links:</li>
+                        <li class="divider"></li>
+                        <li><a ng-href="#">ElNido Palawan</a>
+                        </li>
+                        <li><a ng-href="#">Filipinas</a>
+                        </li>
+                        <li><a ng-href="#">PlayPen</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--============| Work on these links |============-->
+                <li><a ng-href="#/meetings" class="allCaps">Meetings</a></li>
+                <li><a ng-href="#/login" class="allCaps">LogIn</a></li>
+                <li><a ng-href="#/register" class="allCaps">Register</a></li>
+                <!--============| **************************** |============-->
+                
+                <li class="dropdown">
+                    <a ng-href="#" class="dropdown-toggle allCaps" data-toggle="dropdown">Social<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a ng-href="http://www.facebook.com">Facebook</a>
+                        </li>
+                        <li><a ng-href="http://www.twitter.com">Twitter</a>
+                        </li>
+                        <li><a ng-href="http://www.linkedIn.com">LinkedIn</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navigation -->
