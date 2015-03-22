@@ -4,7 +4,7 @@
 	padding-left: 20px;
 }
 .navbar{
-	border: 0px solid red;
+	border: 1px solid red;
 	opacity: 1;
 }
 .navbar-nav {
@@ -38,8 +38,12 @@
 	background-color: orangeRed;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #ddd;
+	color: #ddd; /*Text menu color*/
 }
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: orangeRed; /*Text menu hover color. RollOver*/
+}
+
 /*---icon-bar bg color---*/
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
 	background-color: orangeRed;
@@ -48,12 +52,12 @@
 	border-color: #005E8E; /*005E8E 1B799D*/
 }
 .gonzales{
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 18px;
 	color: lightGray;
 }
 .design{
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 18px;
 	color: orangeRed;
 }
