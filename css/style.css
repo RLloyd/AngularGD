@@ -21,7 +21,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+menu, navX, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -55,7 +55,7 @@ q, blockquote {
 a img {
   border: none; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, navX, section, summary {
   display: block; }
 
 * {
@@ -77,14 +77,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
-  background-color: #023E54; 
+  /*background-color: #eee;
   background-image: url(images/fallback-gradient.png); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
-  background-image: -webkit-linear-gradient(top, #023E54, #10AAC0); 
-  background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
-  background-image: -o-linear-gradient(top, #023E54, #10AAC0);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#aaa), to(#fff));
+  background-image: -webkit-linear-gradient(top, #aaa, #fff); 
+  background-image: -moz-linear-gradient(top, #aaa, #fff);
+  background-image: -o-linear-gradient(top, #aaa, #fff);
   min-height: 100%;
-  height: auto;
+  height: 600px;*/
 }
 
 body  {
@@ -440,52 +440,52 @@ ul.awardslist li .btn-delete {
   border: none;
 }
 
-nav {
+navX {
   width: 100%;
   background: #EFC94C;
 }
 
-nav .table {
+navX .table {
   display: table;   /* Allow the centering to work */
   margin: 0 auto;
 }
 
-nav li.branding a {
+navX li.branding a {
   font-size: 1.5em;
   text-align: left;
   background: #1E9382;
   color: #A2CFA5;
 }
 
-nav ul {
+navX ul {
   width: 100%;
   margin: 0 auto;
 }
 
-nav ul li {
+navX ul li {
   float: left;
   color: #145266;
   font-family: Bree Serif, serif;
 }
 
-nav ul li.user {
+navX ul li.user {
   background-color: #D24244;
   color: #EFC94C;
   font-family: Bree Serif, serif;
 }
 
-nav ul li.user.hello {
+navX ul li.user.hello {
   margin-left: 60px;
   padding: 10px 15px;
 }
 
-nav ul li a {
+navX ul li a {
   float: left;
   text-decoration: none;
   padding: 10px 15px;
 }
 
-nav ul li a:hover {
+navX ul li a:hover {
   background-color: #45B29D;
   color: #E0E7AB;
 }
