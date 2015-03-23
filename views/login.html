@@ -2,16 +2,22 @@
    
 <section class="login">
    
-    <form name="myForm" novalidate>
+    <form name="myForm" ng-submit="login()" novalidate>
        
-        <h1>LOGIN {{name}}</h1>
+        <h1>LOGIN</h1>
         <p>Log-in to access site features.</p>
-
-        <input type="email" name="email" placeholder="Email" autofocus ng-model="user.email" ng-required="true">
-        <p class="error" ng-show="myForm.email.$invalid && myForm.email.$touched">Must be a valid email.</p>
-        
-        <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
-        <p class="error" ng-show="myForm.password.$invalid && myForm.password.$touched">Password is required.</p>
+        <div class="row">
+           <div class="col col-md-12">
+                <input type="email" name="email" placeholder="Email" autofocus ng-model="user.email" ng-required="true">
+                <p class="error validationerror" ng-show="myForm.email.$invalid && myForm.email.$touched">Must be a valid email.</p>
+            </div>
+            
+            <div class="col col-md-12">
+                <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+                <p class="error validationerror" ng-show="myForm.password.$invalid && myForm.password.$touched">Password is required.</p>
+            </div>
+            
+        </div>
         
         <button type="submit" class="btn btn-info" ng-disabled="myForm.$invalid">Login</button>
         <p>or <a href="#/register">Register</a></p>
