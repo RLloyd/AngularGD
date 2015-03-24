@@ -21,7 +21,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, navX, output, ruby, section, summary,
+menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -55,7 +55,7 @@ q, blockquote {
 a img {
   border: none; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, navX, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
 * {
@@ -77,15 +77,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, navX,
 }
 
 html {
-  /*background-color: #eee;
+  background-color: #023E54; 
   background-image: url(images/fallback-gradient.png); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#fff));
-  background-image: -webkit-linear-gradient(top, #000, #fff); 
-  background-image: -moz-linear-gradient(top, #000, #fff);
-  background-image: -o-linear-gradient(top, #000, #fff);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
+  background-image: -webkit-linear-gradient(top, #023E54, #10AAC0); 
+  background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
+  background-image: -o-linear-gradient(top, #023E54, #10AAC0);
   min-height: 100%;
-  height: 600px;*/
-   
+  height: auto;
 }
 
 body  {
@@ -96,10 +95,10 @@ body  {
 }
 
 main {
-  background: #660000;
-  width: 100%;
+  background: #FCF4DC;
+  width: 80%;
   min-width: 310px;
-  max-width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   padding: 10px 20px;
   text-align: center;
@@ -107,7 +106,7 @@ main {
   -webkit-box-shadow: 0px 0px 4px 0px black;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
   position: relative;
-  opacity: .75;
+  opacity: .95;
 }
 
 @media all and (max-width: 400px) {
@@ -119,9 +118,9 @@ main {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bree Serif', serif;
   font-weight: normal;
-  /*color: #eee;*/
+  color: #475b62;
   text-shadow: 1px 1px rgb(255,255,255, 1);
 }
 
@@ -135,7 +134,7 @@ header {
 }
 
 h1{
-  color:bisque;
+  color: #145266;
   font-size: 2rem;
   line-height: 100%;
   margin-bottom: 10px;
@@ -170,7 +169,7 @@ input {
   display: inline-block;
   padding: 10px 0 10px 15px;
   font-size: 1rem;
-  color:antiquewhite;
+  color: #475B62;
   background: rgba(255,255,255,0.4);
   border: 1px solid white;
   border-radius: 10px;
@@ -214,24 +213,24 @@ p.error {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    /*font-size: 1rem;*/
-    /*line-height: 140%;*/
+    font-size: 1rem;
+    line-height: 140%;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
     border: 1px solid transparent;
-    border-radius: 5px;
-    /*background: #C61C6F;*/
-    /*color: #FCF4DC;*/
-    /*background-color: #14566A;*/
+    border-radius: 4px;
+    background: #C61C6F;
+    color: #FCF4DC;
+    background-color: #14566A;
     background-size: 18px 18px;
     min-width: 28px;
     min-height: 28px;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid #bbb;
+    border: 2px solid white;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -441,52 +440,52 @@ ul.awardslist li .btn-delete {
   border: none;
 }
 
-navX {
+nav {
   width: 100%;
   background: #EFC94C;
 }
 
-navX .table {
+nav .table {
   display: table;   /* Allow the centering to work */
   margin: 0 auto;
 }
 
-navX li.branding a {
+nav li.branding a {
   font-size: 1.5em;
   text-align: left;
   background: #1E9382;
   color: #A2CFA5;
 }
 
-navX ul {
+nav ul {
   width: 100%;
   margin: 0 auto;
 }
 
-navX ul li {
+nav ul li {
   float: left;
   color: #145266;
   font-family: Bree Serif, serif;
 }
 
-navX ul li.user {
+nav ul li.user {
   background-color: #D24244;
   color: #EFC94C;
   font-family: Bree Serif, serif;
 }
 
-navX ul li.user.hello {
+nav ul li.user.hello {
   margin-left: 60px;
   padding: 10px 15px;
 }
 
-navX ul li a {
+nav ul li a {
   float: left;
   text-decoration: none;
   padding: 10px 15px;
 }
 
-navX ul li a:hover {
+nav ul li a:hover {
   background-color: #45B29D;
   color: #E0E7AB;
 }
@@ -537,7 +536,7 @@ navX ul li a:hover {
   display: inline-block;
   background: #E5DEC8;
   padding: 5px 20px 8px 15px;
-  margin: 10px 10px;
+  margin: 3px 10px;
   border-radius: 10px;
   border: 2px solid white;
 }

@@ -1,0 +1,30 @@
+Firebase AngularFire Changes: https://www.firebase.com/docs/web/libraries/angular/changelog.html
+
+CHANGED
+$asArray() has been replaced by calling the $firebaseArray service directly.
+
+CHANGED
+$asObject() has been replaced by calling the $firebaseObject service directly.
+
+CHANGED
+$FirebaseArray renamed to $firebaseArray.
+
+CHANGED
+$FirebaseObject renamed to $firebaseObject.
+
+IMPORTANT
+AngularFire support for Simple Login has been removed in favor of the new authentication methods introduced in Firebase 1.1.0.
+
+The $firebaseSimpleLogin service has been replaced with $firebaseAuth, which supports the new Firebase authentication methods introduced in Firebase 1.1.0.
+
+CHANGED
+$login() has been replaced with the functionally equivalent $authWith*() methods.
+
+CHANGED
+$logout() has been renamed to $unauth().
+
+CHANGED
+The API for the user management methods have changed slightly.
+
+REMOVED
+The user property has been removed from the authentication service. You can now use $getAuth() to synchronously retrieve a client's authentication state.

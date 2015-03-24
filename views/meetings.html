@@ -1,2 +1,39 @@
-<h1>MEETINGS</h1>
-<p>See all your meetings schedule here.</p>
+<section class="meetings cf">
+    
+    
+    <h1>Add Meeting</h1>
+    
+    <h2>{{error}}</h2>
+    
+    <form class="formgroup addmeeting cf" name="myForm" ng-submit="addMeetupMethod()" novalidate>
+       <div class="row">
+            <div class="col-sm-12 inputwrapperX">
+                <input type="text" name="meetupName" placeholder="Meetup Name" ng-model="meetupName" ng-required="true">
+                <!--<input type="text" name="meetupDate" placeholder="Meetup Date" ng-model="meetupDate" ng-required="true">
+                <input type="text" name="meetupImg" placeholder="Meetup Date" ng-model="meetupDate" ng-required="true">-->
+            </div>
+        </div>
+        <br>  
+        <div class="col-sm-12">
+        <button type="submit" class="btn btn-success" ng-disabled="myForm.$invalid">+=+</button></div>
+    </form>
+    
+    <hr>
+    
+    <h1 class="meetSpacer">Motorcycle Clubs Meetup</h1>
+    <p>Here's a list of the upcoming motorcycle meetups all over the country.
+        <br /> Enjoy and drive carefully!</p>
+    <hr/>
+    <button class="btn btn-danger">TEST</button><br>
+    
+    <div class="row">
+        <div class="col col-sm-12">
+            <div class="list-groupX meeting" ng-repeat="(key,meet) in meetingsData">
+               <span class="list-group-item-headingX text">{{meet.name | uppercase }}</span>
+                <button class="btn btn-love tooltip" ng-click="deleteMeetupMethod(key)"><span>Delete this meetup</span></button><br>
+                <span class="list-group-item-textX text">Entry Date: {{meet.date | date:"MMM. dd, yyyy"}}</span>
+                
+            </div>
+        </div>
+    </div>
+</section>

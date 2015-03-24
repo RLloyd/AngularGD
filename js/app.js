@@ -2,9 +2,10 @@
 
 (function () {
 
-    var app = angular.module("gdApp", ["ngRoute", "regContlr", "AppControllers"]);
+    var app = angular.module("gdApp", 
+        ["ngRoute", "firebase", "regContlr", "meetContlr", "AppControllers"]);
 
-    var appCtrl = angular.module("AppControllers", []);
+    var appCtrl = angular.module("AppControllers", ["firebase"]);
 
     app.config(["$routeProvider", function ($routeProvider) {
         $routeProvider
@@ -17,7 +18,8 @@
             controller: "RegistrationController"
         })
         .when("/meetings", {
-            templateUrl: "views/meetings.html"
+            templateUrl: "views/meetings.html",
+            controller: "MeetingsController"
         })
         .otherwise({
             redirectTo: "/login"
