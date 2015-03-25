@@ -3,14 +3,26 @@
 (function () {
 
     var app = angular.module("regContlr", []);
-    app.controller("RegistrationController", function ($scope, $location) {
+    app.controller("RegistrationController", function ($scope, $firebaseSimpleLogin, $location) {
 
+        var fireRefSL = new Firebase("https://angulargdapp.firebaseio.com/");
+        var simpleLogin = $firebaseSimpleLogin(fireRefSL);
+        
         /*-----------|login() function. This will route to the location.path of /meetings in app.js where it's been registered*/
         $scope.login = function () {
-            $location.path("/meetings");
+            simpleLogin.$login("password", {
+                email : $scope.user.email,
+                password: $scope.user.password
+            }).then(function(user){
+                $location.path("/meetings");
+            }, 
+            function(error){
+                $scope.message = error.toString();
+            });
+            /*$location.path("/meetings");*/
             /*console.log("$location.path: " + $location.path);*/
             /*-----------|This function will be called by ng-submit in login.html*/
-            alert($scope.user.email);
+            /*alert($scope.user.email);*/
         };
         
         /*-----------|register() function.*/

@@ -560,6 +560,11 @@ navX ul li a:hover {
   position: relative;
 }
 
+.tooltipX span {
+    opacity: 0;
+}
+
+
 .tooltip span {
   background: #DC322F;
   bottom: 100%;

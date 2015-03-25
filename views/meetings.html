@@ -28,9 +28,9 @@
     
     <div class="row">
         <div class="col col-sm-12">
-            <div class="list-groupX meeting" ng-repeat="(key,meet) in meetingsData">
+            <div class="list-groupX meeting" ng-repeat="(key, meet) in meetingsData">
                <span class="list-group-item-headingX text">{{meet.name | uppercase }}</span>
-                <button class="btn btn-love tooltip" ng-click="deleteMeetupMethod(key)"><span>Delete this meetup</span></button><br>
+                <button class="btn btn-delete tooltipX" ng-click="deleteMeetupMethod(key)"><span>x</span></button><br>
                 <span class="list-group-item-textX text">Entry Date: {{meet.date | date:"MMM. dd, yyyy"}}</span>
                 
             </div>

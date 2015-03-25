@@ -6,6 +6,9 @@
        
         <h1>LOGIN</h1>
         <p>Log-in to access site features.</p>
+        {{message}}
+        <!--<p class="error formerror" ng-show="message">{{message}}</p>-->
+        
         <div class="row">
            <div class="col col-md-12">
                 <input type="email" name="email" placeholder="Email" autofocus ng-model="user.email" ng-required="true">
