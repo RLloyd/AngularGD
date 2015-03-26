@@ -1,4 +1,4 @@
-/*************| MEETINGS CONTROLLER |*************/
+/*************| MEETINGS CONTROLLER 3/25/2015 |*************/
 
 (function () {
 
@@ -92,4 +92,4 @@
 
     }]);
 
-}());
+}()); //end IIFE: Immediately-Invoked Function Expression

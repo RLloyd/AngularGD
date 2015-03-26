@@ -1,9 +1,16 @@
-/*************| MAIN APP REGISTRATION WITH DEPENDENCIES |*************/
+/*************| MAIN APP REGISTRATION WITH DEPENDENCIES 3/25/2015 |*************/
 
 (function () {
 
     var app = angular.module("gdApp", 
-        ["ngRoute", "firebase", "regContlr", "meetContlr", "AppControllers"]);
+        ["ngRoute", 
+         "firebase", 
+         "regContlr", 
+         "meetContlr", 
+         "AppControllers", 
+         "authFactory", 
+         "statusContlr"
+        ]).constant("FIREBASE_URL", "https://angulargdapp.firebaseio.com/");
 
     var appCtrl = angular.module("AppControllers", ["firebase"]);
 
@@ -26,4 +33,4 @@
         });
     }]);
 
-}());
+}());//end IIFE: Immediately-Invoked Function Expression

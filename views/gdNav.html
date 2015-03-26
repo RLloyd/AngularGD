@@ -45,9 +45,9 @@
                     </ul>
                 </li>
                 <!--============| Work on these links |============-->
-                <li><a ng-href="#/meetings" class="allCaps">Meetings</a></li>
-                <li><a ng-href="#/login" class="allCaps">LogIn</a></li>
-                <li><a ng-href="#/register" class="allCaps">Register</a></li>
+                <li ng-show="userEmail"><a ng-href="#/meetings" class="allCaps">Meetings</a></li>
+                <li ng-hide="userEmail"><a ng-href="#/login" class="allCaps">LogIn</a></li>
+                <li ng-hide="userEmail"><a ng-href="#/register" class="allCaps">Register</a></li>
                 <!--============| **************************** |============-->
                 
                 <li class="dropdown">

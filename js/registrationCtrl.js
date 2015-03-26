@@ -1,19 +1,22 @@
-/*************| LOGIN/REGISTRATION CONTROLLER |*************/
+/*************| LOGIN/REGISTRATION CONTROLLER 3/25/2015 |*************/
 
 (function () {
 
     var app = angular.module("regContlr", []);
-    app.controller("RegistrationController", function ($scope, $firebaseSimpleLogin, $location) {
+    
+    app.controller("RegistrationController", function (
+                   $scope, 
+                    $firebaseSimpleLogin, 
+                    $location, 
+                    Authentication) {
 
-        var fireRefSL = new Firebase("https://angulargdapp.firebaseio.com/");
-        var simpleLogin = $firebaseSimpleLogin(fireRefSL);
+        /*var fireRefSL = new Firebase("https://angulargdapp.firebaseio.com/");
+        var simpleLogin = $firebaseSimpleLogin(fireRefSL);*/
         
         /*-----------|login() function. This will route to the location.path of /meetings in app.js where it's been registered*/
         $scope.login = function () {
-            simpleLogin.$login("password", {
-                email : $scope.user.email,
-                password: $scope.user.password
-            }).then(function(user){
+            Authentication.login($scope.user)
+            .then(function(user){
                 $location.path("/meetings");
             }, 
             function(error){
@@ -47,4 +50,4 @@
 
     });
 
-}());
+}()); //end IIFE: Immediately-Invoked Function Expression
