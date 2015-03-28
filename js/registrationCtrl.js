@@ -3,35 +3,58 @@
 (function () {
 
     var app = angular.module("regContlr", []);
-    
+
     app.controller("RegistrationController", function (
-                   $scope, 
-                    $firebaseSimpleLogin, 
-                    $location, 
-                    Authentication) {
+        $scope,
+        $firebaseSimpleLogin,
+        $location,
+        Authentication) {
 
         /*var fireRefSL = new Firebase("https://angulargdapp.firebaseio.com/");
         var simpleLogin = $firebaseSimpleLogin(fireRefSL);*/
-        
+
         /*-----------|login() function. This will route to the location.path of /meetings in app.js where it's been registered*/
         $scope.login = function () {
             Authentication.login($scope.user)
-            .then(function(user){
-                $location.path("/meetings");
-            }, 
-            function(error){
-                $scope.message = error.toString();
-            });
+                .then(function (user) {
+                        $location.path("/meetings");
+                    },
+                    function (error) {
+                        $scope.message = error.toString();
+                    });
             /*$location.path("/meetings");*/
             /*console.log("$location.path: " + $location.path);*/
             /*-----------|This function will be called by ng-submit in login.html*/
             /*alert($scope.user.email);*/
         };
         
-        /*-----------|register() function.*/
-        $scope.register = function () {
-            $location.path("/meetings");
+        /*register() is getting called from register.html*/
+        $scope.rehistro = function () {
+            console.log("$scope.rehistro. Call from register.html");
+            /*Makes a call to Authentication to create a new user*/
+            Authentication.register($scope.user)
+                /*if registration is successful then go to this path*/
+                .then(function (user) {
+                        console.log("Naka rehistron!");
+                        /*Authentication.$createUser($scope.user);*/
+                        /*Authentication.register($scope.user)*/
+                        $location.path("/login");
+                    },
+                    function (error) {
+                        $scope.message = error.toString();
+                    });
+            /*$location.path("/meetings");*/
+            /*console.log("$location.path: " + $location.path);*/
+            /*-----------|This function will be called by ng-submit in login.html*/
+            /*alert($scope.user);*/
+            console.log("Calling Authentication");
         };
+
+
+        /*-----------|register() function.*/
+        /*$scope.register = function () {
+            $location.path("/meetings");
+        };*/
 
         /*-----------|$scope snoops around. Feed the xprsion {{name}} and can get info back with $scope.$on(...) */
         /*$scope.name = "Odee";

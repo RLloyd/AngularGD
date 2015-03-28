@@ -31,14 +31,21 @@
         /*Stacked locally scoped Object Literal. Traditional single Object Literal notation.*/
         var logObject = {
             login: function (user) {
-                console.log("user: "+user);
+                console.log("login user: "+user);
                 return simpleLogin.$login("password", {
                     email: user.email,
                     password: user.password
                 });
             }, //end login
             
+            register: function (user) {
+                console.log("Create User! Call made from RegistrationController");
+                return simpleLogin.$createUser(user.email, user.password)
+                console.log("User Created!"); //never get called.
+            }, //end register
+            
             logout: function(){
+                console.log("you're logout!");
                 return simpleLogin.$logout();
             } //end logout
 

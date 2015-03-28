@@ -6,10 +6,10 @@
     
     app.controller("StatusController", ["$scope", "$rootScope", "$firebaseSimpleLogin", "$location", "Authentication", function ($scope, $rootScope, $firebaseSimpleLogin, $location, Authentication) {
         
-        /*Logout function*/
+        /*Logout function. Part of $firebaseSimpleLogin*/
         $scope.logout = function(){
             Authentication.logout(); //Calls the logout() from Authentication
-            $location.path("/login");
+            $location.path("/login"); //This $location.path... is being excecuted in app.js
         };
          $rootScope.$on("$firebaseSimpleLogin:logout", function(ev, authUser){
             $scope.userEmail = null; //resets the user email to null            

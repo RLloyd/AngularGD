@@ -2,10 +2,13 @@
    
 <section class="register">
    
-    <form name="myForm" ng-submit="register()" novalidate>
+    <form name="myForm" ng-submit="rehistro()" novalidate>
        
         <h1>REGISTER {{name}}</h1>
         <p>To access site features.</p>
+        
+         {{message}}
+        <p class="error formerror" ng-show="message">{{message}}</p>
 
         <input type="firstname" name="firstname" placeholder="First Name" autofocus ng-model="user.firstname" ng-required="true">
         <p class="error validationerror" ng-show="myForm.firstname.$invalid && myForm.firstname.$touched">First Name is required.</p>
